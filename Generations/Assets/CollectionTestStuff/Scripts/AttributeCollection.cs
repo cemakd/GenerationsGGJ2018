@@ -53,6 +53,19 @@ public class AttributeCollection : MonoBehaviour {
 				return false;
 			}
 		}
+
+		Debug.Log ("size before removal " + attribute_collection.Count);
+		//Remove the attributes used in the recipe from the UI and attribute collection
+		//it is important that this list is looped through backwards so the indices don't change
+		for (int i = size - 1; i >= 0; i--) {
+			if (was_checked [i]) {
+				attribute_collection.RemoveAt (i);
+			}
+		}
+		Debug.Log ("size after removal " + attribute_collection.Count);
+		//call Reset Display
+		displayer.Reset_Displayed_Items();
+
 		return true;
 	}
 
