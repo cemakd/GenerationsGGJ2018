@@ -48,42 +48,50 @@ public class MatingRitualManager : MonoBehaviour {
 	    if (totalLevel > 0)
 	    {
 		    statText += "Feet: Lvl " + totalLevel + "\n";
+            PlayerPrefs.SetInt("feet", (int)totalLevel);
 		}
 		totalLevel = LevelRandomizer(playerUpgrades.legsLevel , mateUpgrades.legsLevel);
 		if (totalLevel > 0)
 		{
 			statText += "Legs: Lvl " + totalLevel + "\n";
-		}
+            PlayerPrefs.SetInt("legs", (int)totalLevel);
+        }
 		totalLevel = LevelRandomizer(playerUpgrades.armsLevel, mateUpgrades.armsLevel);
 		if (totalLevel > 0)
 		{
 			statText += "Arms: Lvl " + totalLevel + "\n";
-		}
+            PlayerPrefs.SetInt("arms", (int)totalLevel);
+        }
 		totalLevel = LevelRandomizer(playerUpgrades.clawLevel, mateUpgrades.clawLevel);
 		if (totalLevel > 0)
 		{
 			statText += "Claws: Lvl " + totalLevel + "\n";
-		}
+            PlayerPrefs.SetInt("claws", (int)totalLevel);
+        }
 		totalLevel = LevelRandomizer(playerUpgrades.eyesLevel, mateUpgrades.eyesLevel);
 		if (totalLevel > 0)
 		{
 			statText += "Eyes: Lvl " + totalLevel + "\n";
-		}
+            PlayerPrefs.SetInt("eyes", (int)totalLevel);
+        }
 		totalLevel = LevelRandomizer(playerUpgrades.wingsLevel, mateUpgrades.wingsLevel);
 		if (totalLevel > 0)
 		{
 			statText += "Wings: Lvl " + totalLevel + "\n";
-		}
+            PlayerPrefs.SetInt("wings", (int)totalLevel);
+        }
 		totalLevel = LevelRandomizer(playerUpgrades.wingSpanLevel, mateUpgrades.wingSpanLevel);
 		if (totalLevel > 0)
 		{
 			statText += "Wingspan: Lvl " + totalLevel + "\n";
-		}
+            PlayerPrefs.SetInt("wingspan", (int)totalLevel);
+        }
 		totalLevel = LevelRandomizer(playerUpgrades.gillsLevel, mateUpgrades.gillsLevel);
 		if (totalLevel > 0)
 		{
 			statText += "Gills: Lvl " + totalLevel + "\n";
-		}
+            PlayerPrefs.SetInt("gills", (int)totalLevel);
+        }
 		offspringStats.text = statText;
     }
 
