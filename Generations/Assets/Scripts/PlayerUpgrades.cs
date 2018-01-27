@@ -79,9 +79,13 @@ public class PlayerUpgrades : MonoBehaviour {
                 }
                 break;
 		    case BodyPart.Eyes:
-			    Add_Body_Part_To_Character (BodyPart.Eyes);
-			    Debug.Log ("Eyes");
+                Debug.Log("Eyes upgraded");
                 eyesLevel++;
+//                Add_Body_Part_To_Character (BodyPart.Eyes);
+                if (isPlayer) {
+                    CameraGrow cg = Camera.main.gameObject.GetComponent<CameraGrow>();
+                    cg.Grow();
+                }
                 break;
 		    case BodyPart.Claws:
 			    Add_Body_Part_To_Character (BodyPart.Claws);
