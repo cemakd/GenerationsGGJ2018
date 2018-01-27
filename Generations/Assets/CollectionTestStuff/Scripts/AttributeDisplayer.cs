@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BodyPartDisplayer : MonoBehaviour {
+public class AttributeDisplayer : MonoBehaviour {
 
-	public BodyPartCollection bpc;
+	public AttributeCollection bpc;
 	public GameObject draw_on_UI;
 
 	// Use this for initialization
@@ -23,7 +23,7 @@ public class BodyPartDisplayer : MonoBehaviour {
 		GameObject display = Instantiate(draw_on_UI, transform);
 
 		//set display's position based on number already collected
-		int num_collected = bpc.body_collection.Count;
+		int num_collected = bpc.attribute_collection.Count;
 		display.transform.position = new Vector2 (display.transform.position.x + (num_collected-1) * 50, display.transform.position.y);
 
 		//set image component image to collected

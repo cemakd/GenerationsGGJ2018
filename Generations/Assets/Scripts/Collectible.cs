@@ -14,11 +14,10 @@ public class Collectible : MonoBehaviour {
 
     public CollectibleType type;
 
-    void OnTriggerEnter2D(Collider2D other) {
-        if (other.gameObject.GetComponent<PlatformerCharacter2D>() != null) {
-            PlayerUpgrades pu = other.gameObject.GetComponent<PlayerUpgrades>();
-            pu.Upgrade(type);
-            Destroy(gameObject);
-        }
-    }
+	void OnTriggerEnter2D (Collider2D other) {
+		AttributeCollection bpc = other.GetComponent<AttributeCollection> ();
+		if (bpc != null) {
+			bpc.Add_Part (gameObject);
+		}
+	}
 }
