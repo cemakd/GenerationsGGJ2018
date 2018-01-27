@@ -10998,7 +10998,7 @@ Prefab:
     - target: {fileID: 114061068617883066, guid: a36e8524c5ed55a4e829c51b3b60558d,
         type: 2}
       propertyPath: secondsPerStage
-      value: 10
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a36e8524c5ed55a4e829c51b3b60558d, type: 2}
@@ -34238,6 +34238,10 @@ Prefab:
       propertyPath: displayer
       value: 
       objectReference: {fileID: 1203043818}
+    - target: {fileID: 4808368470996332, guid: f4baeec48efb1b5408437776d07a7fc2, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f4baeec48efb1b5408437776d07a7fc2, type: 2}
   m_IsPrefabParent: 0
