@@ -19,8 +19,9 @@ namespace UnityStandardAssets._2D
         private Animator m_Anim;            // Reference to the player's animator component.
         private Rigidbody2D m_Rigidbody2D;
         private bool m_FacingRight = true;  // For determining which way the player is currently facing.
-        public float jumpFactor = 1f;
-       public float speedFactor = 1f;      
+        public float jumpFactor;
+        public float speedFactor;
+
         private void Awake()
         {
             // Setting up references.
@@ -110,6 +111,11 @@ namespace UnityStandardAssets._2D
             Vector3 theScale = transform.localScale;
             theScale.x *= -1;
             transform.localScale = theScale;
+        }
+
+        public void UpgradeJumpHeight() {
+            Debug.Log("HEY");
+            jumpFactor += 0.5f;
         }
     }
 }
