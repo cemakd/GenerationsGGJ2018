@@ -31,6 +31,7 @@ public class SoulmateSpawner : MonoBehaviour {
         foreach (var i in randomPositions) {
             SpawnMate(spawnPositions[i].position);
         }
+//        Debug.Log(randomPositions);
 
     }
 
@@ -43,8 +44,9 @@ public class SoulmateSpawner : MonoBehaviour {
         foreach (PlayerUpgrades.BodyPart partType in Enum.GetValues(typeof(PlayerUpgrades.BodyPart))) {
             SceneLoader sl = GameObject.Find("SceneLoader").GetComponent<SceneLoader>();
             int randomLevel = Random.Range(0, sl.currentStage + 1);
+//            Debug.Log(mate.name + " " + partType + " level: " + randomLevel );
             if (randomLevel > 0) {
-//                Debug.Log(partType + " level: " + randomLevel );
+
                 for (int i = 0; i < randomLevel; ++i) {
                     pu.Upgrade(partType);
                 }

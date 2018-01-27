@@ -101,7 +101,6 @@ namespace UnityStandardAssets._2D
             }
         }
 
-
         private void Flip()
         {
             // Switch the way the player is labelled as facing.
@@ -115,6 +114,10 @@ namespace UnityStandardAssets._2D
 
         public void UpgradeJumpHeight() {
             jumpFactor += 0.5f;
+        }
+
+        public void UpgradeMovementSpeed() {
+            speedFactor += 0.5f;
         }
     }
 }

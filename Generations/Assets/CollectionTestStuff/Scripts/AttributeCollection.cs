@@ -86,7 +86,7 @@ public class AttributeCollection : MonoBehaviour {
 			case 0:
 				return PlayerUpgrades.BodyPart.Arms;
 			case 1:
-				return PlayerUpgrades.BodyPart.Legs;
+				return PlayerUpgrades.BodyPart.Feet;
 			case 2:
 				return PlayerUpgrades.BodyPart.Eyes;
 			case 3:
@@ -95,6 +95,8 @@ public class AttributeCollection : MonoBehaviour {
 				return PlayerUpgrades.BodyPart.Claws;
 			case 5:
 				return PlayerUpgrades.BodyPart.Gills;
+            case 6:
+			    return PlayerUpgrades.BodyPart.Legs;
 			default:
 				Debug.Log ("wrong index in AttributeCollection, Has_Enough_For_Upgrades " + BodyPartIndex.ToString());
 				return PlayerUpgrades.BodyPart.None;
@@ -112,14 +114,14 @@ public class AttributeCollection : MonoBehaviour {
 			Collectible.CollectibleType.Strenght,
 			Collectible.CollectibleType.Strenght},
 
-		new List<Collectible.CollectibleType>() { //legs
+		new List<Collectible.CollectibleType>() { //feet
 			Collectible.CollectibleType.Agility,
 			Collectible.CollectibleType.Agility,
 			Collectible.CollectibleType.Agility,
 			Collectible.CollectibleType.Agility,
 			Collectible.CollectibleType.Agility},
 
-		new List<Collectible.CollectibleType>() { //eyes
+        new List<Collectible.CollectibleType>() { //eyes
 			Collectible.CollectibleType.Vision,
 			Collectible.CollectibleType.Vision,
 			Collectible.CollectibleType.Vision,
@@ -147,5 +149,12 @@ public class AttributeCollection : MonoBehaviour {
 			Collectible.CollectibleType.Agility,
 			Collectible.CollectibleType.Agility,
 			Collectible.CollectibleType.Agility},
-	};
+
+        new List<Collectible.CollectibleType>() { //legs
+			Collectible.CollectibleType.Agility,
+            Collectible.CollectibleType.Agility,
+            Collectible.CollectibleType.Agility,
+            Collectible.CollectibleType.Flight,
+            Collectible.CollectibleType.Flight},
+    };
 }

@@ -5,7 +5,7 @@ using UnityStandardAssets._2D;
 
 public class PlayerUpgrades : MonoBehaviour {
 
-	public enum BodyPart {None, Claws, Wings, Legs, Arms, Gills, Eyes};
+	public enum BodyPart {None, Claws, Wings, Legs, Feet, Arms, Gills, Eyes};
 
 	public GameObject claws;
 	public GameObject wings;
@@ -17,10 +17,18 @@ public class PlayerUpgrades : MonoBehaviour {
 
     private bool isPlayer = false;
     private int clawLevel = 0;
+    private List<GameObject> clawList = new List<GameObject>();
     private int legsLevel = 0;
+    private int feetLevel = 0;
+    private List<GameObject> feetList = new List<GameObject>();
     private int wingsLevel = 0;
+    private List<GameObject> wingList = new List<GameObject>();
     private int eyesLevel = 0;
-	private int armsLevel = 0;
+    private List<GameObject> eyeList = new List<GameObject>();
+    private int armsLevel = 0;
+    private List<GameObject> armList = new List<GameObject>();
+    private int gillsLevel = 0;
+    private List<GameObject> gillsList = new List<GameObject>();
 
     void Start() {
         if (GetComponent<PlatformerCharacter2D>() != null)
@@ -36,13 +44,27 @@ public class PlayerUpgrades : MonoBehaviour {
             break;
 		case BodyPart.Legs:
             legsLevel++;
-			Add_Body_Part_To_Character (BodyPart.Legs);
 			Debug.Log ("Legs");
+            if (feetList.Count > 0)
+                EnlargeScale(feetList);
             if (isPlayer) {
                 GetComponent<PlatformerCharacter2D>().UpgradeJumpHeight();
             }
             break;
-		case BodyPart.Wings:
+        case BodyPart.Feet:
+            Debug.Log("Feet upgraded");
+            feetLevel++;
+            Add_Body_Part_To_Character(BodyPart.Feet);
+            if (feetLevel == 1) {
+                for (int i = 0; i < legsLevel; ++i) {
+                    EnlargeScale(feetList);
+                }
+            }
+            if (isPlayer) {
+                GetComponent<PlatformerCharacter2D>().UpgradeMovementSpeed();
+            }
+            break;
+            case BodyPart.Wings:
 			Add_Body_Part_To_Character (BodyPart.Wings);
 			Debug.Log ("Wings");
             wingsLevel++;
@@ -57,7 +79,12 @@ public class PlayerUpgrades : MonoBehaviour {
 			Debug.Log ("Claws");
 			clawLevel++;
 			break;
-		case BodyPart.None:
+        case BodyPart.Gills:
+//            Add_Body_Part_To_Character(BodyPart.Gills);
+            Debug.Log("Gills upgraded");
+            gillsLevel++;
+            break;
+        case BodyPart.None:
 			Debug.Log ("None");
 			//do nothing
 			break;
@@ -74,8 +101,9 @@ public class PlayerUpgrades : MonoBehaviour {
 		case BodyPart.Arms:
 			part_to_add = arms;
 			break;
-		case BodyPart.Legs:
+		case BodyPart.Feet:
 			part_to_add = legs;
+            feetList.Add(legs);
 			break;
 		case BodyPart.Wings:
 			part_to_add = wings;
@@ -97,7 +125,14 @@ public class PlayerUpgrades : MonoBehaviour {
 		GameObject new_part = Instantiate (part_to_add, new Vector2(
 			transform.position.x + Random.Range(-0.1f, 0.1f),
 			transform.position.y + Random.Range(-0.1f, 0.1f)), Quaternion.identity);
-
+	    new_part.transform.localScale = Vector3.one;
 		new_part.transform.parent = transform;
 	}
+
+    private void EnlargeScale(List<GameObject> list) {
+//        Debug.Log(list + " enlarged");
+        foreach (GameObject obj in list) {
+            obj.transform.localScale *= 1.2f;
+        }
+    }
 }
