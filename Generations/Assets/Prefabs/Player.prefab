@@ -26,7 +26,6 @@ GameObject:
   - component: {fileID: 114358842983408914}
   - component: {fileID: 114982864106918976}
   - component: {fileID: 70175714338622228}
-  - component: {fileID: 114297518385984162}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -157,19 +156,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114297518385984162
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1686598849356034}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9b80081c802cdf428f043772fb61862, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  body_collection: []
-  displayer: {fileID: 0}
 --- !u!114 &114358842983408914
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -212,6 +198,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ea428c1329b1942b3781865ca750e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  claws: {fileID: 1173660868554594, guid: dea4d5b971fa14946b2b078d2cbee108, type: 2}
+  wings: {fileID: 1638883485503316, guid: 722db340cc3dbd143a7c48edffdf6547, type: 2}
+  legs: {fileID: 1086797408507148, guid: e98f03106a28fd149a118f2ba9cb1dd5, type: 2}
+  arms: {fileID: 0}
+  gills: {fileID: 0}
+  eyes: {fileID: 0}
 --- !u!212 &212277418007629234
 SpriteRenderer:
   m_ObjectHideFlags: 1

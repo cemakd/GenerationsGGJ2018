@@ -14,11 +14,16 @@ public class SoulmateSpawner : MonoBehaviour {
     // Use this for initialization
     void Start() {
         spawnPositions = transform.GetComponentsInChildren<Transform>().ToList();
+        foreach (Transform t in spawnPositions) {
+            SpriteRenderer sr = t.gameObject.GetComponent<SpriteRenderer>();
+            if (sr != null)
+                sr.enabled = false;
+        }
         Random rng = new Random();
         Debug.Assert(mateCount <= spawnPositions.Count);
         List<int> randomPositions = new List<int>();
         while (randomPositions.Count != mateCount) {
-            int randomIndex = Random.Range(0, spawnPositions.Count);
+            int randomIndex = Random.Range(1, spawnPositions.Count);
             if (!randomPositions.Contains(randomIndex)) {
                 randomPositions.Add(randomIndex);
             }
@@ -30,16 +35,17 @@ public class SoulmateSpawner : MonoBehaviour {
     }
 
     private void SpawnMate(Vector2 position) {
+        if (matePrefab == null)
+            return;
         GameObject mate = Instantiate(matePrefab, position, Quaternion.identity);
-        var bpc = mate.GetComponent<BodyPartCollection>();
+        var pu = mate.GetComponent<PlayerUpgrades>();
         List<int> bodyPartLevels = new List<int>();
         foreach (PlayerUpgrades.BodyPart partType in Enum.GetValues(typeof(PlayerUpgrades.BodyPart))) {
             SceneLoader sl = GameObject.Find("SceneLoader").GetComponent<SceneLoader>();
-            int randomLevel = Random.Range(0, sl.currentStage);
-            if (randomLevel > 1) {
-                bpc.AddPart(partType);
+            int randomLevel = Random.Range(0, sl.currentStage + 1);
+            if (randomLevel > 0) {
+//                Debug.Log(partType + " level: " + randomLevel );
                 for (int i = 0; i < randomLevel; ++i) {
-                    PlayerUpgrades pu = mate.GetComponent<PlayerUpgrades>();
                     pu.Upgrade(partType);
                 }
             }
