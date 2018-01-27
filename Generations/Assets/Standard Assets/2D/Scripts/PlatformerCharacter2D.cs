@@ -48,7 +48,6 @@ namespace UnityStandardAssets._2D {
             m_Anim.SetBool("Ground", m_Grounded);
 
             // Set the vertical animation
-            m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
         }
 
 

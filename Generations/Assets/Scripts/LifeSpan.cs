@@ -12,7 +12,7 @@ public class LifeSpan : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		sr = GetComponent<SpriteRenderer>();
+		sr = GetComponentInChildren<SpriteRenderer>();
 		currentColor = sr.color;
 
 	}
