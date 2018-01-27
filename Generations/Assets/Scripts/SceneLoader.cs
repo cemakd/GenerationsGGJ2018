@@ -46,7 +46,7 @@ public class SceneLoader : MonoBehaviour {
             yield return new WaitForSeconds(5f);
             if (stageNum == 6)
                 SceneManager.LoadScene("WinGame");
-            SceneManager.LoadScene("Stage" + stageNum);
+            SceneManager.LoadScene("Stage" + 1);
         }
         yield return null;
     }

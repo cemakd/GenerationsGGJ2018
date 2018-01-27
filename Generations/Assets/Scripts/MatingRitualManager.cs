@@ -45,31 +45,31 @@ public class MatingRitualManager : MonoBehaviour {
         }
         totalLevel = playerUpgrades.legsLevel + mateUpgrades.legsLevel;
         if (totalLevel > 0) {
-            statText += "Legs: Lvl " + Math.Ceiling(0.7f * totalLevel);
+            statText += "Legs: Lvl " + Math.Ceiling(0.7f * totalLevel) + "\n";
         }
         totalLevel = playerUpgrades.armsLevel + mateUpgrades.armsLevel;
         if (totalLevel > 0) {
-            statText += "Arms: Lvl " + Math.Ceiling(0.7f * totalLevel);
+            statText += "Arms: Lvl " + Math.Ceiling(0.7f * totalLevel) + "\n";
         }
         totalLevel = playerUpgrades.clawLevel + mateUpgrades.clawLevel;
         if (totalLevel > 0) {
-            statText += "Claws: Lvl " + Math.Ceiling(0.7f * totalLevel);
+            statText += "Claws: Lvl " + Math.Ceiling(0.7f * totalLevel) + "\n";
         }
         totalLevel = playerUpgrades.eyesLevel + mateUpgrades.eyesLevel;
         if (totalLevel > 0) {
-            statText += "Eyes: Lvl " + Math.Ceiling(0.7f * totalLevel);
+            statText += "Eyes: Lvl " + Math.Ceiling(0.7f * totalLevel) + "\n";
         }
         totalLevel = playerUpgrades.wingsLevel + mateUpgrades.wingsLevel;
         if (totalLevel > 0) {
-            statText += "Wings: Lvl " + Math.Ceiling(0.7f * totalLevel);
+            statText += "Wings: Lvl " + Math.Ceiling(0.7f * totalLevel) + "\n";
         }
         totalLevel = playerUpgrades.wingSpanLevel + mateUpgrades.wingSpanLevel;
         if (totalLevel > 0) {
-            statText += "Wingspan: Lvl " + Math.Ceiling(0.7f * totalLevel);
+            statText += "Wingspan: Lvl " + Math.Ceiling(0.7f * totalLevel) + "\n";
         }
         totalLevel = playerUpgrades.gillsLevel + mateUpgrades.gillsLevel;
         if (totalLevel > 0) {
-            statText += "Gills: Lvl " + Math.Ceiling(0.7f * totalLevel);
+            statText += "Gills: Lvl " + Math.Ceiling(0.7f * totalLevel) + "\n";
         }
         offspringStats.text = statText;
     }
@@ -77,21 +77,21 @@ public class MatingRitualManager : MonoBehaviour {
     private void UpdatePlayerStats(PlayerUpgrades pu, Text txt) {
         string statText = "";
         if (pu.feetLevel > 0)
-            statText += "Feet: Lvl " + pu.feetLevel;
+            statText += "Feet: Lvl " + pu.feetLevel + "\n";
         if (pu.legsLevel > 0)
-            statText += "Legs: Lvl " + pu.legsLevel;
+            statText += "Legs: Lvl " + pu.legsLevel + "\n";
         if (pu.armsLevel > 0)
-            statText += "Arms: Lvl " + pu.armsLevel;
+            statText += "Arms: Lvl " + pu.armsLevel + "\n";
         if (pu.clawLevel > 0)
-            statText += "Claws: Lvl " + pu.clawLevel;
+            statText += "Claws: Lvl " + pu.clawLevel + "\n";
         if (pu.eyesLevel > 0)
-            statText += "Eyes: Lvl " + pu.eyesLevel;
+            statText += "Eyes: Lvl " + pu.eyesLevel + "\n";
         if (pu.wingsLevel > 0)
-            statText += "Wings: Lvl " + pu.wingsLevel;
+            statText += "Wings: Lvl " + pu.wingsLevel + "\n";
         if (pu.wingSpanLevel > 0)
-            statText += "Wingspan: Lvl " + pu.wingSpanLevel;
+            statText += "Wingspan: Lvl " + pu.wingSpanLevel + "\n";
         if (pu.gillsLevel > 0)
-            statText += "Gills: Lvl " + pu.gillsLevel;
+            statText += "Gills: Lvl " + pu.gillsLevel + "\n";
         txt.text = statText;
     }
 }
