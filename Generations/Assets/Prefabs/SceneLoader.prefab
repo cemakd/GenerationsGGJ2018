@@ -53,3 +53,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   secondsPerStage: 60
   stageCanEnd: 0
+  currentStage: 1
