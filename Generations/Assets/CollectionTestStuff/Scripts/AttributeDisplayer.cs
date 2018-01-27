@@ -26,7 +26,7 @@ public class AttributeDisplayer : MonoBehaviour {
 		displayed_items.Add (display);
 
 		//set display's position based on number already collected and add it to the internal list
-		int num_collected = bpc.attribute_collection.Count;
+		int num_collected = displayed_items.Count - 1;
 		display.transform.position = new Vector2 (display.transform.position.x + (num_collected - 1) * 50, display.transform.position.y);
 
 		//set image component image to collected
@@ -40,8 +40,9 @@ public class AttributeDisplayer : MonoBehaviour {
 		}
 
 		displayed_items.Clear ();
-
+//        Debug.Log(bpc.attribute_collection);
 		foreach (var collected_attribute in bpc.attribute_collection) {
+            Debug.Log(collected_attribute.gameObject.name);
 			Add_Part_Display (collected_attribute);
 		}
 	}

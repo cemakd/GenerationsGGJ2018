@@ -128,5 +128,9 @@ namespace UnityStandardAssets._2D {
             canGlide = true;
             glidingAbility -= 0.5f;
         }
+
+        public bool IsGrounded() {
+            return m_Grounded;
+        }
     }
 }

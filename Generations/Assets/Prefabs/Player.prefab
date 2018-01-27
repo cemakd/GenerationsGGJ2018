@@ -22,11 +22,11 @@ GameObject:
   - component: {fileID: 212277418007629234}
   - component: {fileID: 95244519093500734}
   - component: {fileID: 50609501223939968}
+  - component: {fileID: 58603031821780628}
   - component: {fileID: 114670764570335484}
   - component: {fileID: 114358842983408914}
   - component: {fileID: 114982864106918976}
   - component: {fileID: 114137645442693942}
-  - component: {fileID: 58603031821780628}
   - component: {fileID: 114943639058661840}
   m_Layer: 0
   m_Name: Player
@@ -98,7 +98,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1686598849356034}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.775923, y: 0.7358915, z: 0}
+  m_LocalPosition: {x: 0, y: -4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4710373807375148}
@@ -240,6 +240,7 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
@@ -255,6 +256,7 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
