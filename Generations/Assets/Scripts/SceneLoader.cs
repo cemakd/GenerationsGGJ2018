@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class SceneLoader : MonoBehaviour {
 
     public float secondsPerStage = 60;
+    public bool stageCanEnd = false;
 
     private int currentStage = 1;
 
@@ -27,8 +28,12 @@ public class SceneLoader : MonoBehaviour {
 
     IEnumerator LoadStage(int stageNum) {
         yield return new WaitForSeconds(secondsPerStage);
+        Debug.Log(stageCanEnd);
+        if (!stageCanEnd) {
+            SceneManager.LoadScene("GameOver");
+        }
         if (stageNum == 6)
-            SceneManager.LoadScene("EndGame");
+            SceneManager.LoadScene("WinGame");
         SceneManager.LoadScene("Stage" + stageNum);
         yield return null;
     }
