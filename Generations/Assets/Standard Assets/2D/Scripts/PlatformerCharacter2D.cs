@@ -15,6 +15,8 @@ namespace UnityStandardAssets._2D {
 
         private int maxDoubleJumps = 0;
         private int doubleJumpsLeft = 0;
+        private bool canGlide = false;
+        private float glidingAbility = 3;
         private Transform m_CeilingCheck;   // A position marking where to check for ceilings
         const float k_CeilingRadius = .01f; // Radius of the overlap circle to determine if the player can stand up
         private Animator m_Anim;            // Reference to the player's animator component.
@@ -75,13 +77,16 @@ namespace UnityStandardAssets._2D {
 
                 // If the input is moving the player right and the player is facing left...
                 if (move > 0 && !m_FacingRight) {
-                    // ... flip the player.
                     Flip();
                 }
                     // Otherwise if the input is moving the player left and the player is facing right...
                 else if (move < 0 && m_FacingRight) {
-                    // ... flip the player.
                     Flip();
+                }
+
+                if (canGlide && !m_Grounded && Input.GetKey(KeyCode.Space)) {
+                    if (m_Rigidbody2D.velocity.y < -glidingAbility)
+                        m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, -glidingAbility);
                 }
             }
             // If the player should jump...
@@ -117,6 +122,11 @@ namespace UnityStandardAssets._2D {
 
         public void UpgradeDoubleJump() {
             maxDoubleJumps++;
+        }
+
+        public void UpgradeGlideAbility() {
+            canGlide = true;
+            glidingAbility -= 0.5f;
         }
     }
 }

@@ -46,7 +46,7 @@ public class PlayerUpgrades : MonoBehaviour {
 		    case BodyPart.Legs:
                 legsLevel++;
 			    Debug.Log ("Legs");
-                if (feetList.Count > 0)
+                if (feetLevel > 0)
                     EnlargeScale(feetList);
                 if (isPlayer) {
                     GetComponent<PlatformerCharacter2D>().UpgradeJumpHeight();
@@ -67,11 +67,16 @@ public class PlayerUpgrades : MonoBehaviour {
                 break;
             case BodyPart.Wings:
                 Debug.Log("Wings");
+                wingsLevel++;
                 Add_Body_Part_To_Character (BodyPart.Wings);
+                if (wingsLevel == 1) {
+                    for (int i = 0; i < wingSpanLevel; ++i) {
+                        EnlargeScale(wingList);
+                    }
+                }
                 if (isPlayer) {
                     GetComponent<PlatformerCharacter2D>().UpgradeDoubleJump();
                 }
-                wingsLevel++;
                 break;
 		    case BodyPart.Eyes:
 			    Add_Body_Part_To_Character (BodyPart.Eyes);
@@ -91,6 +96,11 @@ public class PlayerUpgrades : MonoBehaviour {
             case BodyPart.WingSpan:
                 Debug.Log("Wing Span upgraded");
                 wingSpanLevel++;
+                if (wingsLevel > 0)
+                    EnlargeScale(wingList);
+                if (isPlayer) {
+                    GetComponent<PlatformerCharacter2D>().UpgradeGlideAbility();
+                }
                 break;
             case BodyPart.None:
 			    Debug.Log ("None");
