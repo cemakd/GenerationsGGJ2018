@@ -97,6 +97,8 @@ public class AttributeCollection : MonoBehaviour {
 				return PlayerUpgrades.BodyPart.Gills;
             case 6:
 			    return PlayerUpgrades.BodyPart.Legs;
+            case 7:
+			    return PlayerUpgrades.BodyPart.WingSpan;
 			default:
 				Debug.Log ("wrong index in AttributeCollection, Has_Enough_For_Upgrades " + BodyPartIndex.ToString());
 				return PlayerUpgrades.BodyPart.None;
@@ -132,8 +134,8 @@ public class AttributeCollection : MonoBehaviour {
 			Collectible.CollectibleType.Flight,
 			Collectible.CollectibleType.Flight,
 			Collectible.CollectibleType.Flight,
-			Collectible.CollectibleType.Flight,
-			Collectible.CollectibleType.Flight},
+			Collectible.CollectibleType.Strenght,
+			Collectible.CollectibleType.Strenght},
 
 		new List<Collectible.CollectibleType>() { //claws
 			Collectible.CollectibleType.Strenght,
@@ -154,6 +156,13 @@ public class AttributeCollection : MonoBehaviour {
 			Collectible.CollectibleType.Agility,
             Collectible.CollectibleType.Agility,
             Collectible.CollectibleType.Agility,
+            Collectible.CollectibleType.Flight,
+            Collectible.CollectibleType.Flight},
+
+        new List<Collectible.CollectibleType>() { //wingspan
+			Collectible.CollectibleType.Flight,
+            Collectible.CollectibleType.Flight,
+            Collectible.CollectibleType.Flight,
             Collectible.CollectibleType.Flight,
             Collectible.CollectibleType.Flight},
     };
