@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4304776966392620}
   - component: {fileID: 212345641266431978}
+  - component: {fileID: 114728591178222468}
   m_Layer: 0
   m_Name: Sprites
   m_TagString: Untagged
@@ -232,6 +233,18 @@ MonoBehaviour:
     m_Bits: 4294967295
   jumpFactor: 1
   speedFactor: 1
+--- !u!114 &114728591178222468
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1529808733369132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 859c68a5bdebef44c87170476e7d523a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToDeath: 59
 --- !u!114 &114943639058661840
 MonoBehaviour:
   m_ObjectHideFlags: 1
