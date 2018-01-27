@@ -837,7 +837,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 2.34375, y: 2.34375}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -880,7 +880,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 02f2097bac11bd24280736373a395cf7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a93fe2c06c03bac43bcc9c49986e9cec, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -926,6 +926,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ea428c1329b1942b3781865ca750e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  claws: {fileID: 1173660868554594, guid: dea4d5b971fa14946b2b078d2cbee108, type: 2}
+  wings: {fileID: 1638883485503316, guid: 722db340cc3dbd143a7c48edffdf6547, type: 2}
+  legs: {fileID: 1086797408507148, guid: e98f03106a28fd149a118f2ba9cb1dd5, type: 2}
+  arms: {fileID: 0}
+  gills: {fileID: 0}
+  eyes: {fileID: 0}
 --- !u!114 &1335052747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1045,7 +1051,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1511053036}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.62, y: -0.08, z: 0}
+  m_LocalPosition: {x: -1.57, y: 0.97, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

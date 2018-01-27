@@ -30,7 +30,6 @@ public class AttributeCollection : MonoBehaviour {
 
 		//check if you have enough attributes for a body part
 		PlayerUpgrades.BodyPart part = Has_Enough_For_Upgrade();
-		Debug.Log ("fuckfuckfuck" + part.ToString ());
 		pu.Upgrade(part);
 	}
 
@@ -65,13 +64,9 @@ public class AttributeCollection : MonoBehaviour {
 			if (Satisfies_Upgrade_Set (BodyPartIndex)) {
 				break;
 			}
-
-			Debug.Log ("didn't find: " + BodyPartIndex);
-
 			BodyPartIndex++;
 		}
 		if (BodyPartIndex == upgrade_sets.Count) {
-			Debug.Log ("didn't find a recipe");
 			return PlayerUpgrades.BodyPart.None;
 		} else {
 			switch (BodyPartIndex) {
