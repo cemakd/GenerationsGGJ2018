@@ -37,41 +37,54 @@ public class MatingRitualManager : MonoBehaviour {
         }
     }
 
+	double LevelRandomizer(float a, float b)
+	{
+		return UnityEngine.Random.Range(0, 1) > 0.5f ? Math.Ceiling((a + b) * UnityEngine.Random.Range(1, 1.3f)) : 
+			Math.Ceiling((a + b) * UnityEngine.Random.Range(0.7f, 1f));
+	}
     private void UpdateOffspringStats() {
         string statText = "";
-        float totalLevel = playerUpgrades.feetLevel + mateUpgrades.feetLevel;
-        if (totalLevel > 0) {
-            statText += "Feet: Lvl " + Math.Ceiling(0.7f * totalLevel);
-        }
-        totalLevel = playerUpgrades.legsLevel + mateUpgrades.legsLevel;
-        if (totalLevel > 0) {
-            statText += "Legs: Lvl " + Math.Ceiling(0.7f * totalLevel) + "\n";
-        }
-        totalLevel = playerUpgrades.armsLevel + mateUpgrades.armsLevel;
-        if (totalLevel > 0) {
-            statText += "Arms: Lvl " + Math.Ceiling(0.7f * totalLevel) + "\n";
-        }
-        totalLevel = playerUpgrades.clawLevel + mateUpgrades.clawLevel;
-        if (totalLevel > 0) {
-            statText += "Claws: Lvl " + Math.Ceiling(0.7f * totalLevel) + "\n";
-        }
-        totalLevel = playerUpgrades.eyesLevel + mateUpgrades.eyesLevel;
-        if (totalLevel > 0) {
-            statText += "Eyes: Lvl " + Math.Ceiling(0.7f * totalLevel) + "\n";
-        }
-        totalLevel = playerUpgrades.wingsLevel + mateUpgrades.wingsLevel;
-        if (totalLevel > 0) {
-            statText += "Wings: Lvl " + Math.Ceiling(0.7f * totalLevel) + "\n";
-        }
-        totalLevel = playerUpgrades.wingSpanLevel + mateUpgrades.wingSpanLevel;
-        if (totalLevel > 0) {
-            statText += "Wingspan: Lvl " + Math.Ceiling(0.7f * totalLevel) + "\n";
-        }
-        totalLevel = playerUpgrades.gillsLevel + mateUpgrades.gillsLevel;
-        if (totalLevel > 0) {
-            statText += "Gills: Lvl " + Math.Ceiling(0.7f * totalLevel) + "\n";
-        }
-        offspringStats.text = statText;
+	    double totalLevel = LevelRandomizer(playerUpgrades.feetLevel, mateUpgrades.feetLevel);
+	    if (totalLevel > 0)
+	    {
+		    statText += "Feet: Lvl " + totalLevel + "\n";
+		}
+		totalLevel = LevelRandomizer(playerUpgrades.legsLevel , mateUpgrades.legsLevel);
+		if (totalLevel > 0)
+		{
+			statText += "Legs: Lvl " + totalLevel + "\n";
+		}
+		totalLevel = LevelRandomizer(playerUpgrades.armsLevel, mateUpgrades.armsLevel);
+		if (totalLevel > 0)
+		{
+			statText += "Arms: Lvl " + totalLevel + "\n";
+		}
+		totalLevel = LevelRandomizer(playerUpgrades.clawLevel, mateUpgrades.clawLevel);
+		if (totalLevel > 0)
+		{
+			statText += "Claws: Lvl " + totalLevel + "\n";
+		}
+		totalLevel = LevelRandomizer(playerUpgrades.eyesLevel, mateUpgrades.eyesLevel);
+		if (totalLevel > 0)
+		{
+			statText += "Eyes: Lvl " + totalLevel + "\n";
+		}
+		totalLevel = LevelRandomizer(playerUpgrades.wingsLevel, mateUpgrades.wingsLevel);
+		if (totalLevel > 0)
+		{
+			statText += "Wings: Lvl " + totalLevel + "\n";
+		}
+		totalLevel = LevelRandomizer(playerUpgrades.wingSpanLevel, mateUpgrades.wingSpanLevel);
+		if (totalLevel > 0)
+		{
+			statText += "Wingspan: Lvl " + totalLevel + "\n";
+		}
+		totalLevel = LevelRandomizer(playerUpgrades.gillsLevel, mateUpgrades.gillsLevel);
+		if (totalLevel > 0)
+		{
+			statText += "Gills: Lvl " + totalLevel + "\n";
+		}
+		offspringStats.text = statText;
     }
 
     private void UpdatePlayerStats(PlayerUpgrades pu, Text txt) {
