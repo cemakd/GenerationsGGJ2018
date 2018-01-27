@@ -9867,7 +9867,7 @@ GameObject:
   - component: {fileID: 483404936}
   - component: {fileID: 483404935}
   m_Layer: 5
-  m_Name: Gf stats (1)
+  m_Name: Offspring Stats
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10994,6 +10994,11 @@ Prefab:
     - target: {fileID: 4171504528665996, guid: a36e8524c5ed55a4e829c51b3b60558d, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114061068617883066, guid: a36e8524c5ed55a4e829c51b3b60558d,
+        type: 2}
+      propertyPath: secondsPerStage
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a36e8524c5ed55a4e829c51b3b60558d, type: 2}
@@ -38239,6 +38244,7 @@ GameObject:
   - component: {fileID: 1776893864}
   - component: {fileID: 1776893866}
   - component: {fileID: 1776893865}
+  - component: {fileID: 1776893867}
   m_Layer: 5
   m_Name: Mating Ritual
   m_TagString: Untagged
@@ -38303,6 +38309,25 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1776893863}
+--- !u!114 &1776893867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1776893863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa175272d506eff4f8d811a83a9890df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  otherUI:
+  - {fileID: 1897956968}
+  - {fileID: 2040477148}
+  - {fileID: 1631976976}
+  playerStats: {fileID: 2051657304}
+  gfStats: {fileID: 1000719565}
+  offspringStats: {fileID: 483404935}
+  mateUpgrades: {fileID: 0}
 --- !u!1001 &1778742660
 Prefab:
   m_ObjectHideFlags: 0

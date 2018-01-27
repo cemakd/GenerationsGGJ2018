@@ -41,9 +41,13 @@ public class SceneLoader : MonoBehaviour {
         if (!stageCanEnd) {
             SceneManager.LoadScene("GameOver");
         }
-        if (stageNum == 6)
-            SceneManager.LoadScene("WinGame");
-        SceneManager.LoadScene("Stage" + stageNum);
+        else {
+            GameObject.Find("Mating Ritual").GetComponent<MatingRitualManager>().UpdateStats();
+            yield return new WaitForSeconds(5f);
+            if (stageNum == 6)
+                SceneManager.LoadScene("WinGame");
+            SceneManager.LoadScene("Stage" + stageNum);
+        }
         yield return null;
     }
 
