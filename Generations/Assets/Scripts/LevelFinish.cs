@@ -13,6 +13,15 @@ public class LevelFinish : MonoBehaviour {
             sl = slObj.GetComponent<SceneLoader>();
     }
 
+    void OnTriggerEnter2D(Collider2D other) {
+        GameObject otherGO = other.gameObject;
+        if (sl != null && otherGO.GetComponent<PlatformerCharacter2D>() != null) {
+            GameObject matingPanel = GameObject.Find("Mating Ritual");
+            MatingRitualManager mrm = matingPanel.GetComponent<MatingRitualManager>();
+            mrm.mateUpgrades = GetComponent<PlayerUpgrades>();
+        }
+    }
+
     void OnTriggerStay2D(Collider2D other) {
         GameObject otherGO = other.gameObject;
         if (sl != null && otherGO.GetComponent<PlatformerCharacter2D>() != null) {

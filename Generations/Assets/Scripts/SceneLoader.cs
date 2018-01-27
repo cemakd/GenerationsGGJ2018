@@ -10,6 +10,10 @@ public class SceneLoader : MonoBehaviour {
 
     public int currentStage = 1;
 
+    void Awake() {
+        DontDestroyOnLoad(this);
+    }
+
 	// Use this for initialization
 	void Start () {
 	    switch (SceneManager.GetActiveScene().name) {

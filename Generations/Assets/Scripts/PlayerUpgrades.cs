@@ -16,19 +16,19 @@ public class PlayerUpgrades : MonoBehaviour {
 
 
     private bool isPlayer = false;
-    private int clawLevel = 0;
+    public int clawLevel = 0;
     private List<GameObject> clawList = new List<GameObject>();
-    private int legsLevel = 0;
-    private int feetLevel = 0;
+    public int legsLevel = 0;
+    public int feetLevel = 0;
     private List<GameObject> feetList = new List<GameObject>();
-    private int wingsLevel = 0;
-    private int wingSpanLevel = 0;
+    public int wingsLevel = 0;
+    public int wingSpanLevel = 0;
     private List<GameObject> wingList = new List<GameObject>();
-    private int eyesLevel = 0;
+    public int eyesLevel = 0;
     private List<GameObject> eyeList = new List<GameObject>();
-    private int armsLevel = 0;
+    public int armsLevel = 0;
     private List<GameObject> armList = new List<GameObject>();
-    private int gillsLevel = 0;
+    public int gillsLevel = 0;
     private List<GameObject> gillsList = new List<GameObject>();
 
     void Start() {
