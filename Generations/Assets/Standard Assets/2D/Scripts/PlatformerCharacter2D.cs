@@ -114,7 +114,6 @@ namespace UnityStandardAssets._2D
         }
 
         public void UpgradeJumpHeight() {
-            Debug.Log("HEY");
             jumpFactor += 0.5f;
         }
     }
