@@ -471,7 +471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5daad1d9b111a0047ae2fdebe809df76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  matePrefab: {fileID: 0}
+  matePrefab: {fileID: 1383278535409278, guid: 78b2e9667dba9d94b936d4fd1883e5fa, type: 2}
   mateCount: 4
 --- !u!114 &114350325279580418
 MonoBehaviour:

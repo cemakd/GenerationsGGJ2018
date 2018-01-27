@@ -14,11 +14,18 @@ public class PlayerUpgrades : MonoBehaviour {
 	public GameObject gills;
 	public GameObject eyes;
 
+
+    private bool isPlayer = false;
     private int clawLevel = 0;
     private int legsLevel = 0;
     private int wingsLevel = 0;
     private int eyesLevel = 0;
 	private int armsLevel = 0;
+
+    void Start() {
+        if (GetComponent<PlatformerCharacter2D>() != null)
+            isPlayer = true;
+    }
 
 	public void Upgrade(BodyPart type) {
         switch (type) {
@@ -31,7 +38,9 @@ public class PlayerUpgrades : MonoBehaviour {
             legsLevel++;
 			Add_Body_Part_To_Character (BodyPart.Legs);
 			Debug.Log ("Legs");
-            GetComponent<PlatformerCharacter2D>().UpgradeJumpHeight();
+            if (isPlayer) {
+                GetComponent<PlatformerCharacter2D>().UpgradeJumpHeight();
+            }
             break;
 		case BodyPart.Wings:
 			Add_Body_Part_To_Character (BodyPart.Wings);

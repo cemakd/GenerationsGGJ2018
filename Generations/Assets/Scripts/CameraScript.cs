@@ -5,7 +5,7 @@ public class CameraScript : MonoBehaviour
 {
 
    public GameObject player;       //Public variable to store a reference to the player game object
-   public int triggery = 100;
+   public int triggery = 4;
 
    private float offsetx, offsety;         //Private variable to store the offset distance between the player and camera
 
