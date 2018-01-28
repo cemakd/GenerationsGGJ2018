@@ -97,8 +97,10 @@ public class PlayerUpgrades : MonoBehaviour {
 			case BodyPart.Claws:
 				Add_Body_Part_To_Character (BodyPart.Claws);
 				Debug.Log ("Claws");
-				wc.UpgradeWallClimb (1);
-			    clawLevel++;
+                clawLevel++;
+                if (isPlayer)
+                    wc.UpgradeWallClimb (1);
+			    
 			    break;
             case BodyPart.WingSpan:
                 Debug.Log("Wing Span upgraded");
