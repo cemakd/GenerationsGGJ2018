@@ -10,10 +10,14 @@ public class SceneLoader : MonoBehaviour {
 
     public int currentStage = 1;
 
+    void Awake() {
+//        DontDestroyOnLoad(this);
+    }
+
 	// Use this for initialization
 	void Start () {
 	    switch (SceneManager.GetActiveScene().name) {
-	        case "Stage1":
+	        case "Scene1":
 	            currentStage = 1;
 	            break;
 	        case "Stage2":
@@ -28,18 +32,38 @@ public class SceneLoader : MonoBehaviour {
 	        case "Stage5":
 	            currentStage = 5;
 	            break;
+            case "GameOver":
+	            break;
 	    }
 	    StartCoroutine(LoadStage(currentStage + 1));
 	}
+
+    void Update() {
+        if (Input.GetKeyDown(KeyCode.R)) {
+            SceneManager.LoadScene("Scene1");
+            PlayerPrefs.SetInt("feet", 0);
+            PlayerPrefs.SetInt("legs", 0);
+            PlayerPrefs.SetInt("arms", 0);
+            PlayerPrefs.SetInt("claws", 0);
+            PlayerPrefs.SetInt("eyes", 0);
+            PlayerPrefs.SetInt("wings", 0);
+            PlayerPrefs.SetInt("wingspan", 0);
+            PlayerPrefs.SetInt("gills", 0);
+        }
+    }
 
     IEnumerator LoadStage(int stageNum) {
         yield return new WaitForSeconds(secondsPerStage);
         if (!stageCanEnd) {
             SceneManager.LoadScene("GameOver");
         }
-        if (stageNum == 6)
-            SceneManager.LoadScene("WinGame");
-        SceneManager.LoadScene("Stage" + stageNum);
+        else {
+            GameObject.Find("Mating Ritual").GetComponent<MatingRitualManager>().UpdateStats();
+            yield return new WaitForSeconds(5f);
+            if (stageNum == 6)
+                SceneManager.LoadScene("WinGame");
+            SceneManager.LoadScene("Scene" + 1);
+        }
         yield return null;
     }
 

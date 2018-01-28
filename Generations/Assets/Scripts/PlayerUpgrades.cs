@@ -16,24 +16,42 @@ public class PlayerUpgrades : MonoBehaviour {
 
 
     private bool isPlayer = false;
-    private int clawLevel = 0;
+    public int clawLevel = 0;
     private List<GameObject> clawList = new List<GameObject>();
-    private int legsLevel = 0;
-    private int feetLevel = 0;
+    public int legsLevel = 0;
+    public int feetLevel = 0;
     private List<GameObject> feetList = new List<GameObject>();
-    private int wingsLevel = 0;
-    private int wingSpanLevel = 0;
+    public int wingsLevel = 0;
+    public int wingSpanLevel = 0;
     private List<GameObject> wingList = new List<GameObject>();
-    private int eyesLevel = 0;
+    public int eyesLevel = 0;
     private List<GameObject> eyeList = new List<GameObject>();
-    private int armsLevel = 0;
+    public int armsLevel = 0;
     private List<GameObject> armList = new List<GameObject>();
-    private int gillsLevel = 0;
+    public int gillsLevel = 0;
     private List<GameObject> gillsList = new List<GameObject>();
 
     void Start() {
-        if (GetComponent<PlatformerCharacter2D>() != null)
+        if (GetComponent<PlatformerCharacter2D>() != null) {
             isPlayer = true;
+            for (int i = 0; i < PlayerPrefs.GetInt("claws"); ++i) {
+                Upgrade(BodyPart.Claws);
+            }
+            for (int i = 0; i < PlayerPrefs.GetInt("feet"); ++i)
+                Upgrade(BodyPart.Feet);
+            for (int i = 0; i < PlayerPrefs.GetInt("legs"); ++i)
+                Upgrade(BodyPart.Legs);
+            for (int i = 0; i < PlayerPrefs.GetInt("wings"); ++i)
+                Upgrade(BodyPart.Wings);
+            for (int i = 0; i < PlayerPrefs.GetInt("wingspan"); ++i)
+                Upgrade(BodyPart.WingSpan);
+            for (int i = 0; i < PlayerPrefs.GetInt("arms"); ++i)
+                Upgrade(BodyPart.Arms);
+            for (int i = 0; i < PlayerPrefs.GetInt("eyes"); ++i)
+                Upgrade(BodyPart.Eyes);
+            for (int i = 0; i < PlayerPrefs.GetInt("gills"); ++i)
+                Upgrade(BodyPart.Gills);
+        }
     }
 
 	public void Upgrade(BodyPart type) {
