@@ -46,7 +46,7 @@ public class PlayerUpgrades : MonoBehaviour {
                 Upgrade(BodyPart.Wings);
             for (int i = 0; i < PlayerPrefs.GetInt("wingspan"); ++i)
                 Upgrade(BodyPart.WingSpan);
-            for (int i = 0; i < PlayerPrefs.GetInt("eyes"); ++i)
+            for (int i = 0; i < 1; ++i)
                 Upgrade(BodyPart.Eyes);
 			Debug.Log ("Done setting up player");
         }
@@ -97,6 +97,7 @@ public class PlayerUpgrades : MonoBehaviour {
                 eyesLevel++;
                 Add_Body_Part_To_Character (BodyPart.Eyes);
                 if (isPlayer) {
+                    Debug.Log("Vision upgrade");
                     CameraGrow cg = Camera.main.gameObject.GetComponent<CameraGrow>();
                     cg.Grow();
                     SetUpgradeText("Eyes upgraded to lvl " + eyesLevel + "!\nVision increased");
@@ -127,7 +128,7 @@ public class PlayerUpgrades : MonoBehaviour {
 			    //do nothing
 			    break;
 		    default:
-			    Debug.Log ("Something else passed to Upgrade");
+			    Debug.Log (type + " passed to Upgrade");
 			    break;
         }
     }

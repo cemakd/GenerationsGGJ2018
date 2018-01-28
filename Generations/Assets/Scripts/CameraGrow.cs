@@ -8,9 +8,9 @@ public class CameraGrow : MonoBehaviour {
     private Camera camera;
 
 	// Use this for initialization
-	void Start () {
-	    camera = GetComponent<Camera>();
-	}
+    void Awake() {
+        camera = GetComponent<Camera>();
+    }
 
     public void Grow() {
         StartCoroutine(ExpandToSize(camera.orthographicSize + 2, growDuration));
