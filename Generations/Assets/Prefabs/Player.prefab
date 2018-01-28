@@ -319,8 +319,6 @@ MonoBehaviour:
   claws: {fileID: 1173660868554594, guid: dea4d5b971fa14946b2b078d2cbee108, type: 2}
   wings: {fileID: 1638883485503316, guid: 722db340cc3dbd143a7c48edffdf6547, type: 2}
   legs: {fileID: 1086797408507148, guid: e98f03106a28fd149a118f2ba9cb1dd5, type: 2}
-  arms: {fileID: 0}
-  gills: {fileID: 0}
   eyes: {fileID: 1534401058181926, guid: eafc58b1728269443bf81d58b6e24119, type: 2}
   clawLevel: 0
   legsLevel: 0
@@ -403,9 +401,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingLayerID: -1255929799
+  m_SortingLayer: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a93fe2c06c03bac43bcc9c49986e9cec, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
