@@ -11163,6 +11163,12 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 522713188}
   m_Script: {fileID: 11500000, guid: 45866d8ade30ecf40909a5535d48cfce, type: 3}
+--- !u!114 &522713190 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114554643548196258, guid: 1389ea2d11eb7b643b3d85223977eacb,
+    type: 2}
+  m_PrefabInternal: {fileID: 522713188}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &522749351
 Prefab:
   m_ObjectHideFlags: 0
@@ -42509,6 +42515,11 @@ Prefab:
       propertyPath: displayer
       value: 
       objectReference: {fileID: 522713189}
+    - target: {fileID: 114982864106918976, guid: f4baeec48efb1b5408437776d07a7fc2,
+        type: 2}
+      propertyPath: upgradeText
+      value: 
+      objectReference: {fileID: 522713190}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f4baeec48efb1b5408437776d07a7fc2, type: 2}
   m_IsPrefabParent: 0

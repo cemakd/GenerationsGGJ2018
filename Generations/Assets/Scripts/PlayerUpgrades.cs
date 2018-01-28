@@ -14,8 +14,6 @@ public class PlayerUpgrades : MonoBehaviour {
 	public GameObject claws;
 	public GameObject wings;
 	public GameObject legs;
-	public GameObject arms;
-	public GameObject gills;
 	public GameObject eyes;
 
 	private WallClimb wc;
@@ -138,9 +136,6 @@ public class PlayerUpgrades : MonoBehaviour {
 		GameObject part_to_add;
 
 		switch (part) {
-		case BodyPart.Arms:
-			part_to_add = arms;
-			break;
 		case BodyPart.Feet:
 			part_to_add = legs;
 			break;
@@ -152,9 +147,6 @@ public class PlayerUpgrades : MonoBehaviour {
 			break;
 		case BodyPart.Claws:
 			part_to_add = claws;
-			break;
-		case BodyPart.Gills:
-			part_to_add = gills;
 			break;
 		default: //just to appease compiler
 			part_to_add = wings;
