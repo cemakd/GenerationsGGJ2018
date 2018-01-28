@@ -39,8 +39,8 @@ public class MatingRitualManager : MonoBehaviour {
 
 	double LevelRandomizer(float a, float b)
 	{
-		return UnityEngine.Random.Range(0, 1) > 0.5f ? Math.Ceiling((a + b) * UnityEngine.Random.Range(1, 1.3f)) : 
-			Math.Ceiling((a + b) * UnityEngine.Random.Range(0.7f, 1f));
+		return UnityEngine.Random.Range(0, 1) > 0.5f ? Math.Ceiling((a + b) * UnityEngine.Random.Range(1, 1.3f) / 2) : 
+			Math.Ceiling((a + b) * UnityEngine.Random.Range(0.7f, 1f) / 2);
 	}
     private void UpdateOffspringStats() {
         string statText = "";
