@@ -46,7 +46,7 @@ public class PlayerUpgrades : MonoBehaviour {
                 Upgrade(BodyPart.Wings);
             for (int i = 0; i < PlayerPrefs.GetInt("wingspan"); ++i)
                 Upgrade(BodyPart.WingSpan);
-            for (int i = 0; i < 1; ++i)
+            for (int i = 0; i < PlayerPrefs.GetInt("eyes"); ++i)
                 Upgrade(BodyPart.Eyes);
 			Debug.Log ("Done setting up player");
         }
