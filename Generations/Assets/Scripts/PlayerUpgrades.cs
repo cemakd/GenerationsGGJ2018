@@ -1,11 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityStandardAssets._2D;
 
 public class PlayerUpgrades : MonoBehaviour {
 
 	public enum BodyPart {None, Claws, Wings, Legs, Feet, Arms, Gills, Eyes, WingSpan};
+
+    public Text upgradeText;
+    public float textDuration = 5f;
 
 	public GameObject claws;
 	public GameObject wings;
@@ -57,6 +61,7 @@ public class PlayerUpgrades : MonoBehaviour {
                     EnlargeScale(feetList);
                 if (isPlayer) {
                     GetComponent<PlatformerCharacter2D>().UpgradeJumpHeight();
+                    SetUpgradeText("Legs upgraded to lvl " + legsLevel + "!\nJump height increased");
                 }
                 break;
             case BodyPart.Feet:
@@ -70,6 +75,7 @@ public class PlayerUpgrades : MonoBehaviour {
                 }
                 if (isPlayer) {
                     GetComponent<PlatformerCharacter2D>().UpgradeMovementSpeed();
+                    SetUpgradeText("Feet upgraded to lvl " + feetLevel + "!\nMovement speed increased");
                 }
                 break;
             case BodyPart.Wings:
@@ -83,23 +89,27 @@ public class PlayerUpgrades : MonoBehaviour {
                 }
                 if (isPlayer) {
                     GetComponent<PlatformerCharacter2D>().UpgradeDoubleJump();
+                    SetUpgradeText("Wings upgraded to lvl " + wingsLevel + "!\nDouble jump limit increased");
                 }
                 break;
 		    case BodyPart.Eyes:
                 Debug.Log("Eyes upgraded");
                 eyesLevel++;
-//                Add_Body_Part_To_Character (BodyPart.Eyes);
+                Add_Body_Part_To_Character (BodyPart.Eyes);
                 if (isPlayer) {
                     CameraGrow cg = Camera.main.gameObject.GetComponent<CameraGrow>();
                     cg.Grow();
+                    SetUpgradeText("Eyes upgraded to lvl " + eyesLevel + "!\nVision increased");
                 }
                 break;
 			case BodyPart.Claws:
 				Add_Body_Part_To_Character (BodyPart.Claws);
 				Debug.Log ("Claws");
                 clawLevel++;
-                if (isPlayer)
-                    wc.UpgradeWallClimb (1);
+                if (isPlayer) {
+                    wc.UpgradeWallClimb(1);
+                    SetUpgradeText("Claws upgraded to lvl " + clawLevel + "!\nClimb walls higher by pressing up");
+                }
 			    
 			    break;
             case BodyPart.WingSpan:
@@ -109,6 +119,7 @@ public class PlayerUpgrades : MonoBehaviour {
                     EnlargeScale(wingList);
                 if (isPlayer) {
                     GetComponent<PlatformerCharacter2D>().UpgradeGlideAbility();
+                    SetUpgradeText("Wingspan upgraded to lvl " + wingSpanLevel + "!\nGlide longer by holding space");
                 }
                 break;
             case BodyPart.None:
@@ -178,5 +189,15 @@ public class PlayerUpgrades : MonoBehaviour {
         foreach (GameObject obj in list) {
             obj.transform.localScale *= 1.2f;
         }
+    }
+
+    private void SetUpgradeText(string txt) {
+        upgradeText.gameObject.SetActive(true);
+        upgradeText.text = txt;
+        Invoke("DeactivateUpgradeText", textDuration);
+    }
+
+    private void DeactivateUpgradeText() {
+        upgradeText.gameObject.SetActive(false);
     }
 }

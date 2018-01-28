@@ -33,6 +33,8 @@ public class LevelFinish : MonoBehaviour {
         GameObject otherGO = other.gameObject;
         if (sl != null && otherGO.GetComponent<PlatformerCharacter2D>() != null) {
             sl.stageCanEnd = true;
+            if (Input.GetKeyDown(KeyCode.DownArrow))
+                StartCoroutine(sl.LoadNextStage());
         }
     }
 }
