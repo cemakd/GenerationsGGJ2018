@@ -38,17 +38,17 @@ public class PlayerUpgrades : MonoBehaviour {
         if (GetComponent<PlatformerCharacter2D>() != null) {
             isPlayer = true;
 			Debug.Log ("Setting up player for to gain things");
-            for (int i = 0; i < 5; ++i)
+            for (int i = 0; i < PlayerPrefs.GetInt("claws"); ++i)
                 Upgrade(BodyPart.Claws);
-            for (int i = 0; i < 5; ++i)
+            for (int i = 0; i < PlayerPrefs.GetInt("feet"); ++i)
                 Upgrade(BodyPart.Feet);
-            for (int i = 0; i < 5; ++i)
+            for (int i = 0; i < PlayerPrefs.GetInt("legs"); ++i)
                 Upgrade(BodyPart.Legs);
-            for (int i = 0; i < 5; ++i)
+            for (int i = 0; i < PlayerPrefs.GetInt("wings"); ++i)
                 Upgrade(BodyPart.Wings);
-            for (int i = 0; i < 5; ++i)
+            for (int i = 0; i < PlayerPrefs.GetInt("wingspan"); ++i)
                 Upgrade(BodyPart.WingSpan);
-            for (int i = 0; i < 5; ++i)
+            for (int i = 0; i < PlayerPrefs.GetInt("eyes"); ++i)
                 Upgrade(BodyPart.Eyes);
 			Debug.Log ("Done setting up player");
         }
