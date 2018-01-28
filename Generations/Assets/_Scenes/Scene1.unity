@@ -37712,7 +37712,7 @@ Prefab:
         type: 2}
       propertyPath: upgradeText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1692596897}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f4baeec48efb1b5408437776d07a7fc2, type: 2}
   m_IsPrefabParent: 0
@@ -40507,9 +40507,20 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114044443949623840, guid: 1389ea2d11eb7b643b3d85223977eacb,
+        type: 2}
+      propertyPath: bpc
+      value: 
+      objectReference: {fileID: 21132823}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1389ea2d11eb7b643b3d85223977eacb, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1692596897 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114554643548196258, guid: 1389ea2d11eb7b643b3d85223977eacb,
+    type: 2}
+  m_PrefabInternal: {fileID: 1692596896}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &1694255467
 Prefab:
   m_ObjectHideFlags: 0
