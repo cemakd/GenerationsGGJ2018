@@ -319,7 +319,7 @@ MonoBehaviour:
   legs: {fileID: 1086797408507148, guid: e98f03106a28fd149a118f2ba9cb1dd5, type: 2}
   arms: {fileID: 0}
   gills: {fileID: 0}
-  eyes: {fileID: 0}
+  eyes: {fileID: 1534401058181926, guid: eafc58b1728269443bf81d58b6e24119, type: 2}
   clawLevel: 0
   legsLevel: 0
   feetLevel: 0
