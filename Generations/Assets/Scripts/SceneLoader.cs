@@ -13,6 +13,10 @@ public class SceneLoader : MonoBehaviour {
     void Awake() {
         switch (SceneManager.GetActiveScene().name)
         {
+            case "Tutorial":
+                currentStage = 0;
+                Reset_Body_Player_Prefs();
+                break;
             case "Scene1":
                 currentStage = 1;
                 Reset_Body_Player_Prefs();
@@ -55,7 +59,7 @@ public class SceneLoader : MonoBehaviour {
             yield return new WaitForSeconds(5f);
             if (stageNum == 5)
                 SceneManager.LoadScene("WinGame");
-            SceneManager.LoadScene("Scene" + stageNum);
+            StartCoroutine(LoadLevel("Scene" + (currentStage + 1), 1f));
         }
         yield return null;
     }
@@ -63,9 +67,11 @@ public class SceneLoader : MonoBehaviour {
     public IEnumerator LoadNextStage() {
         GameObject.Find("Mating Ritual").GetComponent<MatingRitualManager>().UpdateStats();
         yield return new WaitForSeconds(5f);
+//        if (SceneManager.GetActiveScene().name == "Tutorial")
+//            StartCoroutine(LoadLevel("Scene1", 1f));
         if (currentStage == 5)
             SceneManager.LoadScene("WinGame");
-        SceneManager.LoadScene("Scene" + (currentStage + 1));
+        StartCoroutine(LoadLevel("Scene" + (currentStage + 1), 1f));
         yield return null;
     }
 
@@ -79,14 +85,28 @@ public class SceneLoader : MonoBehaviour {
 	}
 
     public void Play() {
-        SceneManager.LoadScene("Scene1");
+        Fading fader = GameObject.Find("SceneTransition").GetComponent<Fading>();
+        if (fader != null)
+            fader.BeginFade(1);
+        StartCoroutine(LoadLevel("Scene1", 1f));
     }
 
     public void Tutorial() {
-        SceneManager.LoadScene("Tutorial");
+        Fading fader = GameObject.Find("SceneTransition").GetComponent<Fading>();
+        if (fader != null)
+            fader.BeginFade(1);
+        StartCoroutine(LoadLevel("Tutorial", 1f));
     }
 
     public void Credits() {
-        SceneManager.LoadScene("Credits");
+        Fading fader = GameObject.Find("SceneTransition").GetComponent<Fading>();
+        if (fader != null)
+            fader.BeginFade(1);
+        StartCoroutine(LoadLevel("Credits", 1f));
+    }
+
+    private IEnumerator LoadLevel(string name, float seconds) {
+        yield return new WaitForSeconds(seconds);
+        SceneManager.LoadScene(name);
     }
 }

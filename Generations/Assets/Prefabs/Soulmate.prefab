@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1383278535409278}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19, y: -1, z: 0}
+  m_LocalPosition: {x: 16, y: -9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -80,12 +80,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ea428c1329b1942b3781865ca750e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  upgradeText: {fileID: 0}
+  textDuration: 5
   claws: {fileID: 1173660868554594, guid: dea4d5b971fa14946b2b078d2cbee108, type: 2}
   wings: {fileID: 1638883485503316, guid: 722db340cc3dbd143a7c48edffdf6547, type: 2}
   legs: {fileID: 1086797408507148, guid: e98f03106a28fd149a118f2ba9cb1dd5, type: 2}
-  arms: {fileID: 1173660868554594, guid: dea4d5b971fa14946b2b078d2cbee108, type: 2}
-  gills: {fileID: 1173660868554594, guid: dea4d5b971fa14946b2b078d2cbee108, type: 2}
   eyes: {fileID: 1173660868554594, guid: dea4d5b971fa14946b2b078d2cbee108, type: 2}
+  clawLevel: 0
+  legsLevel: 0
+  feetLevel: 0
+  wingsLevel: 0
+  wingSpanLevel: 0
+  eyesLevel: 0
 --- !u!114 &114328897070106334
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -109,6 +115,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d3ccc7bf20639f4f952d24a03db4a87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mate_instruction: {fileID: 1964038787516178, guid: b8a1e005adff5bb4ea8a90c6a9028bec,
+    type: 2}
 --- !u!212 &212572496450726784
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -142,7 +150,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 6d17fc81f056efd489273348f7dc0ebf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
