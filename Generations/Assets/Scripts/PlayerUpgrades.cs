@@ -50,6 +50,7 @@ public class PlayerUpgrades : MonoBehaviour {
                 Upgrade(BodyPart.WingSpan);
             for (int i = 0; i < PlayerPrefs.GetInt("eyes"); ++i)
                 Upgrade(BodyPart.Eyes);
+			Debug.Log ("Done setting up player");
         }
     }
 

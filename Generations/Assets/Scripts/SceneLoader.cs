@@ -41,12 +41,7 @@ public class SceneLoader : MonoBehaviour {
     void Update() {
         if (Input.GetKeyDown(KeyCode.R)) {
             SceneManager.LoadScene("Scene1");
-            PlayerPrefs.SetInt("feet", 0);
-            PlayerPrefs.SetInt("legs", 0);
-            PlayerPrefs.SetInt("claws", 0);
-            PlayerPrefs.SetInt("eyes", 0);
-            PlayerPrefs.SetInt("wings", 0);
-            PlayerPrefs.SetInt("wingspan", 0);
+			Reset_Body_Player_Prefs ();
         }
     }
 
@@ -72,6 +67,12 @@ public class SceneLoader : MonoBehaviour {
         yield return null;
     }
 
-
-
+	public void Reset_Body_Player_Prefs() {
+		PlayerPrefs.SetInt("feet", 0);
+		PlayerPrefs.SetInt("legs", 0);
+		PlayerPrefs.SetInt("claws", 0);
+		PlayerPrefs.SetInt("eyes", 0);
+		PlayerPrefs.SetInt("wings", 0);
+		PlayerPrefs.SetInt("wingspan", 0);
+	}
 }
