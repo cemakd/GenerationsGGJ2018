@@ -236,6 +236,7 @@ MonoBehaviour:
   playerStats: {fileID: 114679702936719188}
   gfStats: {fileID: 114267843872174772}
   offspringStats: {fileID: 114727049920183232}
+  egg: {fileID: 1318207715623260, guid: b0feecb85a3c4a64cb3e5d225c749e35, type: 2}
   mateUpgrades: {fileID: 0}
 --- !u!114 &114037356516430902
 MonoBehaviour:
