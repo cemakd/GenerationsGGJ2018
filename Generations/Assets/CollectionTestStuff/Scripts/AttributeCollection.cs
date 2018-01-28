@@ -145,13 +145,6 @@ public class AttributeCollection : MonoBehaviour {
 			Collectible.CollectibleType.Agility,
 			Collectible.CollectibleType.Agility},
 
-		new List<Collectible.CollectibleType>() { //gills
-			Collectible.CollectibleType.Vision,
-			Collectible.CollectibleType.Vision,
-			Collectible.CollectibleType.Agility,
-			Collectible.CollectibleType.Agility,
-			Collectible.CollectibleType.Agility},
-
         new List<Collectible.CollectibleType>() { //legs
 			Collectible.CollectibleType.Agility,
             Collectible.CollectibleType.Agility,
