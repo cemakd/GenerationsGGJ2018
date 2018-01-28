@@ -33,8 +33,11 @@ public class PlayerUpgrades : MonoBehaviour {
     private List<GameObject> eyeList = new List<GameObject>();
 
     void Start() {
+		wc = GetComponent<WallClimb> ();
+
         if (GetComponent<PlatformerCharacter2D>() != null) {
             isPlayer = true;
+			Debug.Log ("Setting up player for to gain things");
             for (int i = 0; i < PlayerPrefs.GetInt("claws"); ++i)
                 Upgrade(BodyPart.Claws);
             for (int i = 0; i < PlayerPrefs.GetInt("feet"); ++i)
@@ -48,8 +51,6 @@ public class PlayerUpgrades : MonoBehaviour {
             for (int i = 0; i < PlayerPrefs.GetInt("eyes"); ++i)
                 Upgrade(BodyPart.Eyes);
         }
-
-		wc = GetComponent<WallClimb> ();
     }
 
 	public void Upgrade(BodyPart type) {

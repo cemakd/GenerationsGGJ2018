@@ -197,7 +197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45866d8ade30ecf40909a5535d48cfce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bpc: {fileID: 114137645442693942, guid: f4baeec48efb1b5408437776d07a7fc2, type: 2}
+  bpc: {fileID: 0}
   draw_on_UI: {fileID: 1224607310805518, guid: 20d63767466865745bd776534978ebe2, type: 2}
 --- !u!114 &114080908280022482
 MonoBehaviour:
