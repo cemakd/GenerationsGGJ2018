@@ -25,12 +25,15 @@ namespace UnityStandardAssets._2D {
         public float jumpFactor;
         public float speedFactor;
 
+        private AudioSource audioSource;
+
         private void Awake() {
             // Setting up references.
             m_GroundCheck = transform.Find("GroundCheck");
             m_CeilingCheck = transform.Find("CeilingCheck");
             m_Anim = GetComponent<Animator>();
             m_Rigidbody2D = GetComponent<Rigidbody2D>();
+            audioSource = GetComponent<AudioSource>();
         }
 
         private void FixedUpdate() {

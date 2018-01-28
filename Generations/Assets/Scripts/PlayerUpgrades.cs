@@ -27,17 +27,12 @@ public class PlayerUpgrades : MonoBehaviour {
     private List<GameObject> wingList = new List<GameObject>();
     public int eyesLevel = 0;
     private List<GameObject> eyeList = new List<GameObject>();
-    public int armsLevel = 0;
-    private List<GameObject> armList = new List<GameObject>();
-    public int gillsLevel = 0;
-    private List<GameObject> gillsList = new List<GameObject>();
 
     void Start() {
         if (GetComponent<PlatformerCharacter2D>() != null) {
             isPlayer = true;
-            for (int i = 0; i < PlayerPrefs.GetInt("claws"); ++i) {
+            for (int i = 0; i < PlayerPrefs.GetInt("claws"); ++i)
                 Upgrade(BodyPart.Claws);
-            }
             for (int i = 0; i < PlayerPrefs.GetInt("feet"); ++i)
                 Upgrade(BodyPart.Feet);
             for (int i = 0; i < PlayerPrefs.GetInt("legs"); ++i)
@@ -46,12 +41,8 @@ public class PlayerUpgrades : MonoBehaviour {
                 Upgrade(BodyPart.Wings);
             for (int i = 0; i < PlayerPrefs.GetInt("wingspan"); ++i)
                 Upgrade(BodyPart.WingSpan);
-            for (int i = 0; i < PlayerPrefs.GetInt("arms"); ++i)
-                Upgrade(BodyPart.Arms);
             for (int i = 0; i < PlayerPrefs.GetInt("eyes"); ++i)
                 Upgrade(BodyPart.Eyes);
-            for (int i = 0; i < PlayerPrefs.GetInt("gills"); ++i)
-                Upgrade(BodyPart.Gills);
         }
 
 		wc = GetComponent<WallClimb> ();
@@ -59,11 +50,6 @@ public class PlayerUpgrades : MonoBehaviour {
 
 	public void Upgrade(BodyPart type) {
         switch (type) {
-		    case BodyPart.Arms:
-			    armsLevel++;
-			    Add_Body_Part_To_Character (BodyPart.Arms);
-			    Debug.Log ("Arms");
-                break;
 		    case BodyPart.Legs:
                 legsLevel++;
 			    Debug.Log ("Legs");
@@ -114,11 +100,6 @@ public class PlayerUpgrades : MonoBehaviour {
 				wc.UpgradeWallClimb (1);
 			    clawLevel++;
 			    break;
-            case BodyPart.Gills:
-    //            Add_Body_Part_To_Character(BodyPart.Gills);
-                Debug.Log("Gills upgraded");
-                gillsLevel++;
-                break;
             case BodyPart.WingSpan:
                 Debug.Log("Wing Span upgraded");
                 wingSpanLevel++;
@@ -172,9 +153,6 @@ public class PlayerUpgrades : MonoBehaviour {
 		new_part.transform.parent = transform;
 
         switch (part) {
-            case BodyPart.Arms:
-                armList.Add(new_part);
-                break;
             case BodyPart.Feet:
                 feetList.Add(new_part);
                 break;
@@ -186,9 +164,6 @@ public class PlayerUpgrades : MonoBehaviour {
                 break;
             case BodyPart.Claws:
                 clawList.Add(new_part);
-                break;
-            case BodyPart.Gills:
-                part_to_add = gills;
                 break;
             default: //just to appease compiler
                 part_to_add = wings;
