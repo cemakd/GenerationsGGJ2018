@@ -32,8 +32,8 @@ public class PlayerUpgrades : MonoBehaviour {
 
     void Start() {
 		wc = GetComponent<WallClimb> ();
-        GameObject upTextGO = GameObject.Find("UpgradeText");
-        upgradeText = upTextGO.GetComponent<Text>();
+//        GameObject upTextGO = GameObject.Find("UpgradeText");
+//        upgradeText = upTextGO.GetComponent<Text>();
 
         if (GetComponent<PlatformerCharacter2D>() != null) {
             isPlayer = true;
