@@ -46,4 +46,11 @@ public class AttributeDisplayer : MonoBehaviour {
 			Add_Part_Display (collected_attribute);
 		}
 	}
+
+	public void Collection_Disappear() {
+		foreach (var collected in displayed_items) {
+			collected.SetActive (false);
+			Destroy (collected);
+		}
+	}
 }

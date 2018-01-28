@@ -29,6 +29,10 @@ public class MatingRitualManager : MonoBehaviour {
         UpdatePlayerStats(playerUpgrades, playerStats);
         UpdatePlayerStats(mateUpgrades, gfStats);
         UpdateOffspringStats();
+
+		//no attributes in front of UI
+		playerUpgrades.gameObject.GetComponent<AttributeCollection>().displayer.Collection_Disappear();
+
         playerStats.gameObject.SetActive(true);
         gfStats.gameObject.SetActive(true);
         offspringStats.gameObject.SetActive(true);
