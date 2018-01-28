@@ -11,37 +11,37 @@ public class SceneLoader : MonoBehaviour {
     public int currentStage = 1;
 
     void Awake() {
-//        DontDestroyOnLoad(this);
-    }
-
-	// Use this for initialization
-	void Start () {
-	    switch (SceneManager.GetActiveScene().name) {
-	        case "Scene1":
-	            currentStage = 1;
-	            break;
-	        case "Scene2":
-	            currentStage = 2;
-	            break;
-	        case "Scene3":
-	            currentStage = 3;
-	            break;
-	        case "Scene4":
-	            currentStage = 4;
-	            break;
-	        case "Scene5":
-	            currentStage = 5;
-	            break;
+        switch (SceneManager.GetActiveScene().name)
+        {
+            case "Scene1":
+                currentStage = 1;
+                Reset_Body_Player_Prefs();
+                break;
+            case "Scene2":
+                currentStage = 2;
+                break;
+            case "Scene3":
+                currentStage = 3;
+                break;
+            case "Scene4":
+                currentStage = 4;
+                break;
+            case "Scene5":
+                currentStage = 5;
+                break;
             case "GameOver":
-	            break;
-	    }
-	    StartCoroutine(LoadStage(currentStage + 1));
-	}
+                break;
+        }
+        StartCoroutine(LoadStage(currentStage + 1));
+    }
 
     void Update() {
         if (Input.GetKeyDown(KeyCode.R)) {
             SceneManager.LoadScene("Scene1");
 			Reset_Body_Player_Prefs ();
+        }
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            SceneManager.LoadScene("Menu");
         }
     }
 
@@ -77,4 +77,16 @@ public class SceneLoader : MonoBehaviour {
 		PlayerPrefs.SetInt("wings", 0);
 		PlayerPrefs.SetInt("wingspan", 0);
 	}
+
+    public void Play() {
+        SceneManager.LoadScene("Scene1");
+    }
+
+    public void Tutorial() {
+        SceneManager.LoadScene("Tutorial");
+    }
+
+    public void Credits() {
+        SceneManager.LoadScene("Credits");
+    }
 }
