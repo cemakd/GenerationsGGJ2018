@@ -25,14 +25,18 @@ public class MatingRitualManager : MonoBehaviour {
         }
     }
 
-    public void UpdateStats() {
+	public void SpawnEgg()
+	{
+		Instantiate(egg, GameObject.Find("Player").transform.position, Quaternion.identity);
+	}
+	public void UpdateStats() {
         UpdatePlayerStats(playerUpgrades, playerStats);
         UpdatePlayerStats(mateUpgrades, gfStats);
         UpdateOffspringStats();
 
 		//no attributes in front of UI
 		playerUpgrades.gameObject.GetComponent<AttributeCollection>().displayer.Collection_Disappear();
-	    Instantiate(egg, GameObject.Find("Player").transform.position, Quaternion.identity);
+		Invoke("SpawnEgg", 2f);
         playerStats.gameObject.SetActive(true);
         gfStats.gameObject.SetActive(true);
         offspringStats.gameObject.SetActive(true);
