@@ -96,10 +96,12 @@ namespace UnityStandardAssets._2D {
                 // Add a vertical force to the player.
                 m_Grounded = false;
                 m_Anim.SetBool("Ground", false);
-                m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce * jumpFactor));
+	            m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, 0);
+				m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce * jumpFactor));
             }
             else if (doubleJumpsLeft > 0 && jump) {
                 doubleJumpsLeft--;
+				m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, 0);
                 m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
             }
         }
