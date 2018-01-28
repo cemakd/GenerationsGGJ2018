@@ -81,6 +81,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2d1b0a1170d19c4186c70057a129e0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  strImg: {fileID: 21300000, guid: dc96c82e7d1842f4d964f5a4224e917d, type: 3}
+  agiImg: {fileID: 21300000, guid: 88ee6ae50e935b94093eeaa0c530388a, type: 3}
+  fliImg: {fileID: 21300000, guid: 9ffc4f8646d03ab48bc426f6fbcc94b6, type: 3}
+  visImg: {fileID: 21300000, guid: 25ce471bdb685e44c82a11aa4120422d, type: 3}
   type: 2
 --- !u!212 &212773828407011992
 SpriteRenderer:
