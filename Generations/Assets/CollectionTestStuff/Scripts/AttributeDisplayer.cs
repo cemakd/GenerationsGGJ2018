@@ -13,6 +13,9 @@ public class AttributeDisplayer : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		displayed_items = new List<GameObject> ();
+	    GameObject player = GameObject.Find("Player");
+	    if (player != null)
+	        bpc = player.GetComponent<AttributeCollection>();
 	}
 	
 	// Update is called once per frame

@@ -13,6 +13,7 @@ public class AttributeCollection : MonoBehaviour {
 	void Start () {
 		attribute_collection = new List<GameObject> ();
 		pu = GetComponent<PlayerUpgrades> ();
+	    displayer = GameObject.Find("Canvas").GetComponent<AttributeDisplayer>();
 	}
 	
 	// Update is called once per frame

@@ -993,12 +993,12 @@ Prefab:
         type: 2}
       propertyPath: displayer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 736042521}
     - target: {fileID: 114982864106918976, guid: f4baeec48efb1b5408437776d07a7fc2,
         type: 2}
       propertyPath: upgradeText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 736042522}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f4baeec48efb1b5408437776d07a7fc2, type: 2}
   m_IsPrefabParent: 0
@@ -1007,6 +1007,12 @@ GameObject:
   m_PrefabParentObject: {fileID: 1686598849356034, guid: f4baeec48efb1b5408437776d07a7fc2,
     type: 2}
   m_PrefabInternal: {fileID: 44241888}
+--- !u!114 &44241890 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114137645442693942, guid: f4baeec48efb1b5408437776d07a7fc2,
+    type: 2}
+  m_PrefabInternal: {fileID: 44241888}
+  m_Script: {fileID: 11500000, guid: c5e53c9097b9ec44f879e90237117f30, type: 3}
 --- !u!1001 &46920977
 Prefab:
   m_ObjectHideFlags: 0
@@ -15343,7 +15349,7 @@ Prefab:
         type: 2}
       propertyPath: bpc
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 44241890}
     - target: {fileID: 224179723030128080, guid: 1389ea2d11eb7b643b3d85223977eacb,
         type: 2}
       propertyPath: m_AnchorMin.x
@@ -15451,6 +15457,18 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1389ea2d11eb7b643b3d85223977eacb, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &736042521 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114044443949623840, guid: 1389ea2d11eb7b643b3d85223977eacb,
+    type: 2}
+  m_PrefabInternal: {fileID: 736042520}
+  m_Script: {fileID: 11500000, guid: 45866d8ade30ecf40909a5535d48cfce, type: 3}
+--- !u!114 &736042522 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114554643548196258, guid: 1389ea2d11eb7b643b3d85223977eacb,
+    type: 2}
+  m_PrefabInternal: {fileID: 736042520}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &737454248
 Prefab:
   m_ObjectHideFlags: 0
