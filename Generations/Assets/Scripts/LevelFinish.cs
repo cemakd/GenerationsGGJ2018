@@ -22,13 +22,17 @@ public class LevelFinish : MonoBehaviour {
         }
     }
 
+    void OnTriggerExit2D(Collider2D other) {
+        GameObject otherGO = other.gameObject;
+        if (sl != null && otherGO.GetComponent<PlatformerCharacter2D>() != null) {
+            sl.stageCanEnd = false;
+        }
+    }
+
     void OnTriggerStay2D(Collider2D other) {
         GameObject otherGO = other.gameObject;
         if (sl != null && otherGO.GetComponent<PlatformerCharacter2D>() != null) {
             sl.stageCanEnd = true;
-        }
-        else {
-            sl.stageCanEnd = false;
         }
     }
 }
