@@ -63,6 +63,8 @@ public class SceneLoader : MonoBehaviour {
     public IEnumerator LoadNextStage() {
         GameObject.Find("Mating Ritual").GetComponent<MatingRitualManager>().UpdateStats();
         yield return new WaitForSeconds(5f);
+        if (currentStage == 5)
+            SceneManager.LoadScene("WinGame");
         SceneManager.LoadScene("Scene" + (currentStage + 1));
         yield return null;
     }
