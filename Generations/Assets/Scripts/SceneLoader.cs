@@ -20,16 +20,16 @@ public class SceneLoader : MonoBehaviour {
 	        case "Scene1":
 	            currentStage = 1;
 	            break;
-	        case "Stage2":
+	        case "Scene2":
 	            currentStage = 2;
 	            break;
-	        case "Stage3":
+	        case "Scene3":
 	            currentStage = 3;
 	            break;
-	        case "Stage4":
+	        case "Scene4":
 	            currentStage = 4;
 	            break;
-	        case "Stage5":
+	        case "Scene5":
 	            currentStage = 5;
 	            break;
             case "GameOver":
@@ -64,5 +64,14 @@ public class SceneLoader : MonoBehaviour {
         }
         yield return null;
     }
+
+    public IEnumerator LoadNextStage() {
+        GameObject.Find("Mating Ritual").GetComponent<MatingRitualManager>().UpdateStats();
+        yield return new WaitForSeconds(5f);
+        SceneManager.LoadScene("Scene" + (currentStage + 1));
+        yield return null;
+    }
+
+
 
 }
