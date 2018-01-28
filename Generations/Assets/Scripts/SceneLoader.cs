@@ -43,12 +43,10 @@ public class SceneLoader : MonoBehaviour {
             SceneManager.LoadScene("Scene1");
             PlayerPrefs.SetInt("feet", 0);
             PlayerPrefs.SetInt("legs", 0);
-            PlayerPrefs.SetInt("arms", 0);
             PlayerPrefs.SetInt("claws", 0);
             PlayerPrefs.SetInt("eyes", 0);
             PlayerPrefs.SetInt("wings", 0);
             PlayerPrefs.SetInt("wingspan", 0);
-            PlayerPrefs.SetInt("gills", 0);
         }
     }
 
