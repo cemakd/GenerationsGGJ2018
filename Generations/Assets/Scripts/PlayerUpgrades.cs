@@ -34,30 +34,30 @@ public class PlayerUpgrades : MonoBehaviour {
     void Start() {
         if (GetComponent<PlatformerCharacter2D>() != null) {
             isPlayer = true;
-            clawLevel = PlayerPrefs.GetInt("claws");
-            for (int i = 0; i < clawLevel; ++i)
-                Upgrade(BodyPart.Claws);
-            feetLevel = PlayerPrefs.GetInt("feet");
-            for (int i = 0; i < feetLevel; ++i)
-                Upgrade(BodyPart.Feet);
-            legsLevel = PlayerPrefs.GetInt("legs");
-            for (int i = 0; i < legsLevel; ++i)
-                Upgrade(BodyPart.Legs);
-            wingsLevel = PlayerPrefs.GetInt("wings");
-            for (int i = 0; i < wingsLevel; ++i)
-                Upgrade(BodyPart.Wings);
-            wingSpanLevel = PlayerPrefs.GetInt("wingspan");
-            for (int i = 0; i < wingSpanLevel; ++i)
-                Upgrade(BodyPart.WingSpan);
-            armsLevel = PlayerPrefs.GetInt("arms");
-            for (int i = 0; i < armsLevel; ++i)
-                Upgrade(BodyPart.Arms);
-            eyesLevel = PlayerPrefs.GetInt("eyes");
-            for (int i = 0; i < eyesLevel; ++i)
-                Upgrade(BodyPart.Eyes);
-            gillsLevel = PlayerPrefs.GetInt("gills");
-            for (int i = 0; i < gillsLevel; ++i)
-                Upgrade(BodyPart.Gills);
+//            clawLevel = PlayerPrefs.GetInt("claws");
+//            for (int i = 0; i < clawLevel; ++i)
+//                Upgrade(BodyPart.Claws);
+//            feetLevel = PlayerPrefs.GetInt("feet");
+//            for (int i = 0; i < feetLevel; ++i)
+//                Upgrade(BodyPart.Feet);
+//            legsLevel = PlayerPrefs.GetInt("legs");
+//            for (int i = 0; i < legsLevel; ++i)
+//                Upgrade(BodyPart.Legs);
+//            wingsLevel = PlayerPrefs.GetInt("wings");
+//            for (int i = 0; i < wingsLevel; ++i)
+//                Upgrade(BodyPart.Wings);
+//            wingSpanLevel = PlayerPrefs.GetInt("wingspan");
+//            for (int i = 0; i < wingSpanLevel; ++i)
+//                Upgrade(BodyPart.WingSpan);
+//            armsLevel = PlayerPrefs.GetInt("arms");
+//            for (int i = 0; i < armsLevel; ++i)
+//                Upgrade(BodyPart.Arms);
+//            eyesLevel = PlayerPrefs.GetInt("eyes");
+//            for (int i = 0; i < eyesLevel; ++i)
+//                Upgrade(BodyPart.Eyes);
+//            gillsLevel = PlayerPrefs.GetInt("gills");
+//            for (int i = 0; i < gillsLevel; ++i)
+//                Upgrade(BodyPart.Gills);
         }
     }
 
