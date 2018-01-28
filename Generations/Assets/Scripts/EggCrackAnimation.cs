@@ -6,7 +6,7 @@ public class EggCrackAnimation : MonoBehaviour {
 
 	public Sprite[] eggSprites;
 	private SpriteRenderer sr;
-	public GameObject p;
+//	public GameObject p;
 	// Use this for initialization
 	void Start()
 	{
@@ -29,7 +29,7 @@ public class EggCrackAnimation : MonoBehaviour {
 		sr.sprite = eggSprites[2];
 		yield return new WaitForSeconds(0.4f);
 		Destroy(this.gameObject);
-		Instantiate(p, transform.position, Quaternion.identity);
+		//Instantiate(p, transform.position, Quaternion.identity);
 		yield return null;
 	}
 }

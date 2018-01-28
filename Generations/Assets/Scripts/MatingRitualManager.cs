@@ -10,7 +10,7 @@ public class MatingRitualManager : MonoBehaviour {
     public Text playerStats;
     public Text gfStats;
     public Text offspringStats;
-
+	public GameObject egg;
     private PlayerUpgrades playerUpgrades;
     public PlayerUpgrades mateUpgrades;
 
@@ -32,7 +32,7 @@ public class MatingRitualManager : MonoBehaviour {
 
 		//no attributes in front of UI
 		playerUpgrades.gameObject.GetComponent<AttributeCollection>().displayer.Collection_Disappear();
-
+	    Instantiate(egg, GameObject.Find("Player").transform.position, Quaternion.identity);
         playerStats.gameObject.SetActive(true);
         gfStats.gameObject.SetActive(true);
         offspringStats.gameObject.SetActive(true);
