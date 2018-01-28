@@ -254,11 +254,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1a73c23599e7e449970346d393e6297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  max_climb_distance: 2
+  max_climb_distance: 0
   remaining_climb_distance: 0
   what_is_wall:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
 --- !u!114 &114670764570335484
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -314,6 +314,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ea428c1329b1942b3781865ca750e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  upgradeText: {fileID: 0}
+  textDuration: 5
   claws: {fileID: 1173660868554594, guid: dea4d5b971fa14946b2b078d2cbee108, type: 2}
   wings: {fileID: 1638883485503316, guid: 722db340cc3dbd143a7c48edffdf6547, type: 2}
   legs: {fileID: 1086797408507148, guid: e98f03106a28fd149a118f2ba9cb1dd5, type: 2}
