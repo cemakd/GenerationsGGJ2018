@@ -43753,7 +43753,7 @@ Prefab:
         type: 2}
       propertyPath: displayer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2071793105}
     - target: {fileID: 114982864106918976, guid: f4baeec48efb1b5408437776d07a7fc2,
         type: 2}
       propertyPath: upgradeText
@@ -46577,6 +46577,12 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 2071793103}
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &2071793105 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114044443949623840, guid: 1389ea2d11eb7b643b3d85223977eacb,
+    type: 2}
+  m_PrefabInternal: {fileID: 2071793103}
+  m_Script: {fileID: 11500000, guid: 45866d8ade30ecf40909a5535d48cfce, type: 3}
 --- !u!1001 &2072219313
 Prefab:
   m_ObjectHideFlags: 0
