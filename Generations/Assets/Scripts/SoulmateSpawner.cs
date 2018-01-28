@@ -45,12 +45,10 @@ public class SoulmateSpawner : MonoBehaviour {
             SceneLoader sl = GameObject.Find("SceneLoader").GetComponent<SceneLoader>();
             int randomLevel = Random.Range(0, sl.currentStage + 1);
 //            Debug.Log(mate.name + " " + partType + " level: " + randomLevel );
-            if (randomLevel > 0) {
-
-                for (int i = 0; i < randomLevel; ++i) {
-                    pu.Upgrade(partType);
-                }
+			for (int i = 0; i < randomLevel; ++i) {
+				pu.Upgrade(partType);
             }
+            
             bodyPartLevels.Add(randomLevel);
         }
     }
