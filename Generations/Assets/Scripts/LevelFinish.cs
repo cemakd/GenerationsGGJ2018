@@ -11,7 +11,6 @@ public class LevelFinish : MonoBehaviour {
 	private GameObject mate_text;
 
     void Start() {
-		mate_text = Instantiate (mate_instruction, new Vector2 (1000, 100), Quaternion.identity);
 		mate_text.SetActive (false);
 
         GameObject slObj = GameObject.Find("SceneLoader");
