@@ -5,7 +5,7 @@ using UnityEngine;
 namespace UnityStandardAssets._2D {
 	public class WallClimb : MonoBehaviour {
 
-		public float max_climb_distance = 0f;
+		public float max_climb_distance = 2f;
 		public float remaining_climb_distance = 0f;
 		private float climb_speed = 5f;
 		private bool wall_contact = false;

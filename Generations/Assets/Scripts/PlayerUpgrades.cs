@@ -14,6 +14,7 @@ public class PlayerUpgrades : MonoBehaviour {
 	public GameObject gills;
 	public GameObject eyes;
 
+	private WallClimb wc;
 
     private bool isPlayer = false;
     public int clawLevel = 0;
@@ -52,6 +53,8 @@ public class PlayerUpgrades : MonoBehaviour {
             for (int i = 0; i < PlayerPrefs.GetInt("gills"); ++i)
                 Upgrade(BodyPart.Gills);
         }
+
+		wc = GetComponent<WallClimb> ();
     }
 
 	public void Upgrade(BodyPart type) {
@@ -105,9 +108,10 @@ public class PlayerUpgrades : MonoBehaviour {
                     cg.Grow();
                 }
                 break;
-		    case BodyPart.Claws:
-			    Add_Body_Part_To_Character (BodyPart.Claws);
-			    Debug.Log ("Claws");
+			case BodyPart.Claws:
+				Add_Body_Part_To_Character (BodyPart.Claws);
+				Debug.Log ("Claws");
+				wc.UpgradeWallClimb (1);
 			    clawLevel++;
 			    break;
             case BodyPart.Gills:
