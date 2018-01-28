@@ -60,7 +60,7 @@ GameObject:
   - component: {fileID: 114137645442693942}
   - component: {fileID: 58603031821780628}
   - component: {fileID: 114943639058661840}
-  - component: {fileID: 114455712302287190}
+  - component: {fileID: 114501741960393864}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3d7b34a3bb2d4e4b926e7e729d3d410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114455712302287190
+--- !u!114 &114501741960393864
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -254,11 +254,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1a73c23599e7e449970346d393e6297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  max_climb_distance: 0
+  max_climb_distance: 2
   remaining_climb_distance: 0
   what_is_wall:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
 --- !u!114 &114670764570335484
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -278,7 +278,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   jumpFactor: 1
-  speedFactor: 1
+  speedFactor: 1.5
 --- !u!114 &114728591178222468
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -326,8 +326,6 @@ MonoBehaviour:
   wingsLevel: 0
   wingSpanLevel: 0
   eyesLevel: 0
-  armsLevel: 0
-  gillsLevel: 0
 --- !u!212 &212277418007629234
 SpriteRenderer:
   m_ObjectHideFlags: 1

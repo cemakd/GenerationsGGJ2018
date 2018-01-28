@@ -84,20 +84,16 @@ public class AttributeCollection : MonoBehaviour {
 		} else {
 			switch (BodyPartIndex) {
 			case 0:
-				return PlayerUpgrades.BodyPart.Arms;
-			case 1:
 				return PlayerUpgrades.BodyPart.Feet;
-			case 2:
+			case 1:
 				return PlayerUpgrades.BodyPart.Eyes;
-			case 3:
+			case 2:
 				return PlayerUpgrades.BodyPart.Wings;
-			case 4:
+			case 3:
 				return PlayerUpgrades.BodyPart.Claws;
-			case 5:
-				return PlayerUpgrades.BodyPart.Gills;
-            case 6:
+            case 4:
 			    return PlayerUpgrades.BodyPart.Legs;
-            case 7:
+            case 5:
 			    return PlayerUpgrades.BodyPart.WingSpan;
 			default:
 				Debug.Log ("wrong index in AttributeCollection, Has_Enough_For_Upgrades " + BodyPartIndex.ToString());
@@ -109,12 +105,6 @@ public class AttributeCollection : MonoBehaviour {
 
 	//massive set of upgrade lists
 	static List<List<Collectible.CollectibleType>> upgrade_sets = new List<List<Collectible.CollectibleType>>() {
-		new List<Collectible.CollectibleType>() { //arms
-			Collectible.CollectibleType.Strenght,
-			Collectible.CollectibleType.Strenght,
-			Collectible.CollectibleType.Strenght,
-			Collectible.CollectibleType.Strenght,
-			Collectible.CollectibleType.Strenght},
 
 		new List<Collectible.CollectibleType>() { //feet
 			Collectible.CollectibleType.Agility,
